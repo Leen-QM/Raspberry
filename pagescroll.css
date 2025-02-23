@@ -1,0 +1,63 @@
+body, html {
+  margin: 0px;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+.header {
+  width: calc(100vw - 32px);
+  height: 10vh;
+  padding: 16px;
+  background-color: black;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+}
+
+.scrollale {
+  width: 100vw;
+  height: calc(90vh - 32px); /* For the padding of the header */
+  overflow: hidden; /* Remove the scroll bar from the bottom */
+}
+
+.scroll {
+  position: absolute;
+  top: 40vh;
+  font-size: 48px;
+  user-select: none;
+  z-index: 10;
+}
+
+.scroll:hover {
+  cursor: pointer;
+  color: grey;
+}
+
+.left {
+  left: 16px;
+}
+
+.right {
+  right: 16px;
+}
+
+.section {
+  position: absolute;
+  width: 100vw;
+  height: calc(90vh - 32px); /* For the padding of the header*/
+  font-size: 72px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.part1 {
+  left: -100vw;
+}
+
+.part2 {
+  left: 0vw;
+}
+
+.part3 {
+  left: 100vw;
+}
