@@ -1,4 +1,4 @@
-var selected = 2;
+var selected = 1;
 
 window.onkeyup = function(e) {
   if (e.key == 'ArrowRight') {
