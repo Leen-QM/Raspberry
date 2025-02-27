@@ -31,7 +31,7 @@ data = read_rfid_data()
 if data[0] in tag_id_list:
     print(f"ID from RFID: {data[0]}")
     # Create the HTML file with the embed code inserted
-    html_file = create_html_file()
+    html_file = create_html_file(data[1])
 
     # Automatically open the generated HTML file in the web browser
     open_html_in_browser(html_file)
