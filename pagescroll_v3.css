@@ -1,0 +1,97 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrollable {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
+.scroll {
+  position: absolute;
+  top: 40vh;
+  font-size: 48px;
+  user-select: none;
+  z-index: 10;
+  color: white;
+}
+
+.scroll:hover {
+  cursor: pointer;
+  color: grey;
+}
+
+.left {
+  left: 16px;
+}
+
+.right {
+  right: 16px;
+}
+
+.section {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  font-size: 72px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.part1 {
+  left: 0vw;
+}
+
+.part2 {
+  left: 100vw;
+}
+
+.part3 {
+  left: 200vw;
+}
+
+.part4 {
+  left: 300vw;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.audio-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.3s;
+}
+
+.audio-icon::before {
+  content: '▶'; /* Play Icon */
+  color: black;
+}
+
+.audio-icon.playing::before {
+  content: '⏸'; /* Pause Icon */
+  color: black;
+}
+
+.audio-icon:hover {
+  opacity: 0.7;
+}
