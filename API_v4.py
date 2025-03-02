@@ -3,7 +3,7 @@ import webbrowser
 import os
 import RPi.GPIO as GPIO
 from mfrc522 import SimpleMFRC522
-from create_html_file_v3 import create_html_file
+from create_html_file_v5 import create_html_file
 
 # Your Sketchfab API key
 api_key = "1a53843034804dfda647a3a20523b479"
@@ -31,7 +31,7 @@ data = read_rfid_data()
 if data[0] in tag_id_list:
     print(f"ID from RFID: {data[0]}")
     # Create the HTML file with the embed code inserted
-    html_file = create_html_file(data[1])
+    html_file = create_html_file(data[1].strip())
 
     # Automatically open the generated HTML file in the web browser
     open_html_in_browser(html_file)

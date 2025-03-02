@@ -40,6 +40,14 @@ function left() {
   var section2 = document.getElementById('2');
   var section3 = document.getElementById('3');
   var section4 = document.getElementById('4');
+   var currentAudio = document.querySelector(`#audio${selected}`);
+
+  // Pause the current section's audio
+  if (currentAudio) {
+    currentAudio.pause();
+  }
+
+
 
   if (selected == 2) {
     section1.style.left = '0vw';
@@ -70,6 +78,13 @@ function right() {
   var section2 = document.getElementById('2');
   var section3 = document.getElementById('3');
   var section4 = document.getElementById('4');
+  var currentAudio = document.querySelector(`#audio${selected}`);
+
+  // Pause the current section's audio
+  if (currentAudio) {
+    currentAudio.pause();
+  } 
+
 
   if (selected == 1) {
     section1.style.left = '-100vw';
